@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contex/AuthProvidor/AuthProvidor';
 import logo from '../../img/doctor_logo.jpeg'
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
 
     const menuItem = <>
     <li>
-        <Link to='/'>Home</Link>
+        <Link className='font-semibold' to='/'>Home</Link>
+     </li>
+    <li>
+        
      </li>
     </>
+
+    const handelLogOut = () =>{
+        logOut()
+        .then( () =>{})
+        .catch(error => console.error(error))
+    }
     return (
       <div>
         <div className="navbar bg-base-100">
@@ -39,16 +50,29 @@ const Header = () => {
             </div>
             <p className="btn btn-ghost normal-case text-xl">
               <img className="w-9" src={logo} alt="" />
-              <h1>P_Doctor</h1>
+              <h1>P_Doctor </h1>
             </p>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal p-0">
-                {menuItem}
-            </ul>
+            <ul className="menu menu-horizontal p-0">{menuItem}</ul>
           </div>
           <div className="navbar-end">
-            <a href='/' className="btn">Get started</a>
+            <a href="/">
+              {user?.uid ? (
+                <>
+                  <span>{user?.displayName}</span>
+                  <button onClick={handelLogOut} className="btn btn-xs m-1">
+                    Log Out
+                  </button>
+                </>
+              ) : (
+                <button className="btn btn-outline btn-primary">
+                  <Link className="font-semibold " to="/login">
+                    Login
+                  </Link>
+                </button>
+              )}
+            </a>
           </div>
         </div>
       </div>
