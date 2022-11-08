@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const ServicesCard = ({service}) => {
-    const {_id, img, title, description } = service;
+    const { _id, img, title, description, price } = service;
     return (
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure>
-          <img src={img} alt="Shoes" />
+          <img className='w-53' src={img} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
@@ -14,8 +15,11 @@ const ServicesCard = ({service}) => {
             {description.length > 220 ? (
               <p>
                 {description.slice(0, 220) + "..."}
-                <Link className="text-sky-500" to={`/description/${_id}`}>
-                  Readmore
+                <Link
+                  className=" btn btn-primary btn-xs"
+                  to={`/details/${_id}`}
+                >
+                  Read More
                 </Link>
               </p>
             ) : (
@@ -23,7 +27,9 @@ const ServicesCard = ({service}) => {
             )}
           </div>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary btn-sm">Review</button>
+            <>
+              Rating: {price} <FaStar /> <FaStarHalfAlt />
+            </>
           </div>
         </div>
       </div>

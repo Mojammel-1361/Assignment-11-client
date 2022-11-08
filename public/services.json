@@ -1,14 +1,13 @@
 [
   {
-    "_id": "635a0c0b64a6d231228942ae",
     "service_id": "04",
-    "title": "Engine Oil Change",
-    "img": "https://i.ibb.co/T2cpBd5/888.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "title": "hematology specialist",
+    "img": "https://www.windsor.edu/wp-content/uploads/2018/07/Medical-Specialty-1109x675.jpg",
+    "price": "2.5",
+    "description": "Hematologists and hematopathologists are highly trained healthcare providers who specialize in diseases of the blood and blood components. These include blood and bone marrow cells. Hematological tests can help diagnose anemia, infection, hemophilia, blood-clotting disorders, and leukemia. A hematologist is usually a board-certified internist, or pediatrician who has completed additional years of training in hematology. The hematologist generally focuses on direct patient care and diagnosing and managing hematologic disease, especially cancers.",
     "facility": [
       {
-        "name": "Instant Car Services",
+        "name": "hematology specialist",
         "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
       },
       {
@@ -26,15 +25,14 @@
     ]
   },
   {
-    "_id": "635a0c0b64a6d231228942af",
     "service_id": "05",
-    "title": "Battery Charge",
-    "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "title": "Medical specialty",
+    "img": "https://1.bp.blogspot.com/-SKiVz2gHY5Y/YaA14a76f8I/AAAAAAAAUUU/vB8GjX5Rd_Q2qU3YoCqFYgFoXo-56E6jQCLcBGAsYHQ/s640/Medicine.jpeg",
+    "price": "3",
+    "description": "To a certain extent, medical practitioners have long been specialized. According to Galen, specialization was common among Roman physicians.[citation needed] The particular system of modern medical specialties evolved gradually during the 19th century. Informal social recognition of medical specialization evolved before the formal legal system. The particular subdivision of the practice of medicine into various specialties varies from country to country, and is somewhat arbitrary.",
     "facility": [
       {
-        "name": "Instant Car Services",
+        "name": "Medical specialty",
         "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
       },
       {
@@ -52,15 +50,14 @@
     ]
   },
   {
-    "_id": "635b591a1dafe382a9da8c96",
     "service_id": "01",
-    "title": "Full car Repair",
-    "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
-    "price": "200.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "title": "GAIN Doctor",
+    "img": "https://www.bmhsc.org/assets/images/service-line-images/digestive-health/digestive-health.jpg",
+    "price": "5",
+    "description": "The Global Alliance for Improved Nutrition (GAIN) is a Swiss-based foundation launched at the UN in 2002 to tackle the human suffering caused by malnutrition. Working with both governments and businesses, we aim to transform food systems so that they deliver more nutritious food for all people. In particular, we aim to make healthier food choices more desirable, more available, and more affordable. GAIN’s mission is to advance nutrition outcomes by improving consumption of nutritious and safe food for all people, especially the most vulnerable to malnutrition.",
     "facility": [
       {
-        "name": "Instant Car Services",
+        "name": "GAIN Doctor",
         "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
       },
       {
@@ -78,15 +75,14 @@
     ]
   },
   {
-    "_id": "635b5afc1dafe382a9da8c98",
     "service_id": "02",
-    "title": "Engine Repair",
-    "img": "https://i.ibb.co/5MvmD2g/88.jpg",
-    "price": "150.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "title": "oncologist is a doctor",
+    "img": "https://www.ncdhp.com/uploads/blog/_1000x600_crop_center-center_100/Time-to-See-the-Gastroenterologist.jpg",
+    "price": "4.5",
+    "description": "An oncologist is a doctor who treats cancer and provides medical care for a person diagnosed with cancer. An oncologist may also be called a cancer specialist. Surgical oncologists treat cancer using surgery, including removing the tumor and nearby tissue during a operation. This type of surgeon can also perform certain types of biopsies to help diagnose cancer.",
     "facility": [
       {
-        "name": "Instant Car Services",
+        "name": "oncologist is a doctor",
         "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
       },
       {
@@ -104,15 +100,14 @@
     ]
   },
   {
-    "_id": "635b5b691dafe382a9da8c99",
     "service_id": "03",
-    "title": "Automatic Services",
-    "img": "https://i.ibb.co/wh7t3N3/555.jpg",
-    "price": "30.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "title": "A health specialist",
+    "img": "https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322313/doctor-speaking-to-patient.jpg",
+    "price": "3.3",
+    "description": "A health specialist is primarily responsible for the health and welfare care of patients in a community or medical facility. They are also responsible for providing consultations, conducting assessments and examinations, providing prescriptions, and recommending care methods. A health specialist may also diagnose and treat ailments and injuries, coordinate with other health experts, and discuss conditions with patients and their families. Furthermore, a health specialist may participate in public discussions to raise awareness of health issues and lifestyles.",
     "facility": [
       {
-        "name": "Instant Car Services",
+        "name": "health specialist",
         "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
       },
       {
@@ -130,15 +125,14 @@
     ]
   },
   {
-    "_id": "635b5ba51dafe382a9da8c9a",
     "service_id": "06",
-    "title": "Electrical System",
-    "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
-    "price": "20.00",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!",
+    "title": "psychologists specialist",
+    "img": "https://post.healthline.com/wp-content/uploads/2019/01/Blood_TestTube_1200x628-facebook.jpg",
+    "price": "5.2",
+    "description": "Details you can see: Directions and maps. How long health professionals have been in practice, their education and training, licensing and certification, how many office locations they have, hospital affiliations, what types of insurance they cover, languages spoken, and whether they are accepting new patients. Reviews: Doctors, dentists, chiropractors, acupuncturists, psychologists, and other specialists",
     "facility": [
       {
-        "name": "Instant Car Services",
+        "name": "Instant psychologists specialist",
         "details": "Fuga numquam nulla nam, facere neque dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum."
       },
       {
