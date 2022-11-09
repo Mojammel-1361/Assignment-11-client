@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contex/AuthProvidor/AuthProvidor';
 import logo from '../../img/doctor_logo.jpeg'
-import Services from '../../Pages/Home/Services/Services';
+
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -19,6 +19,11 @@ const Header = () => {
             All Services
           </Link>
         </li>
+        {/* <li>
+          <Link className="font-semibold" to="/review">
+            Review
+          </Link>
+        </li> */}
       </>
     );
 
@@ -55,10 +60,10 @@ const Header = () => {
                 {menuItem}
               </ul>
             </div>
-            <p className="btn btn-ghost normal-case text-xl">
+            <Link to='/' className="btn btn-ghost normal-case text-xl">
               <img className="w-9" src={logo} alt="" />
               <h1>P_Doctor </h1>
-            </p>
+            </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal p-0">{menuItem}</ul>

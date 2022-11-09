@@ -5,6 +5,7 @@ import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SeeAll from "../../Pages/SeeAll/SeeAll";
 import SignUp from "../../Pages/SignUp/SignUp";
+import Review from '../../Pages/Review/Review';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,12 @@ const router = createBrowserRouter([
         path: "/seeall",
         element: <SeeAll></SeeAll>,
       },
+      // {
+      //   path: "/review/:id",
+      //   element: <Review></Review>,
+      //   loader: ({ params }) =>
+      //     fetch(`http://localhost:6600/services/${params.id}`),
+      // },
     ],
   },
 ]);

@@ -11,7 +11,7 @@ const SeeAllCard = ({ service }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
-        <div>
+        <div className="text-justify">
           {description.length > 220 ? (
             <p>
               {description.slice(0, 220) + "..."}

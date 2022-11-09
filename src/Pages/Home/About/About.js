@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import about from '../../../img/doctor review.jpeg';
 
 const About = () => {
@@ -35,7 +36,7 @@ const About = () => {
                 cover, languages spoken, and whether they are accepting new
                 patients.
               </p>
-              <button className="btn btn-primary">Get Started</button>
+              <Link to='/login' className="btn btn-primary">Get Started</Link>
             </div>
           </div>
         </div>
