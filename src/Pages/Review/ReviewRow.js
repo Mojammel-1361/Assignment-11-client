@@ -1,7 +1,8 @@
 import React from 'react';
 
-const ReviewRow = ({ review }) => {
-    const { name, email, massages, dept } = review;
+const ReviewRow = ({ review, hendelDelete }) => {
+  const { _id, name, email, massages, dept } = review;
+
   return (
     <tr>
       <td>
@@ -18,7 +19,9 @@ const ReviewRow = ({ review }) => {
       <th>{massages}</th>
       <th>
         <label>
-          <input type="checkbox" className="checkbox" />
+          <button onClick={() => hendelDelete(_id)} className="btn btn-xs">
+            X
+          </button>
         </label>
       </th>
     </tr>

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contex/AuthProvidor/AuthProvidor';
 import ServicesCard from './ServicesCard';
 
 const Services = () => {
     const [services, setServices] = useState([]);
+    const { user} = useContext(AuthContext);
     useEffect(() =>{
         fetch("http://localhost:6600/services")
           .then((res) => res.json())
@@ -29,10 +31,19 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="flex justify-center">
-            <Link className="btn btn-wide m-5" to="/seeall">
+        <div className="flex justify-center mb-5">
+            {
+              user?.email ?
+              <>
+              <Link className="btn btn-wide m-5" to="/seeall">
               See All
             </Link>
+              </>
+              :
+              <>
+            
+              </>
+            }
         </div>
       </div>
     );

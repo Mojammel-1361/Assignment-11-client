@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContext } from '../../../contex/AuthProvidor/AuthProvidor';
 
 const ServicesCard = ({service}) => {
     const { _id, img, title, description, price } = service;
+    const { user } = useContext(AuthContext);
     return (
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure>

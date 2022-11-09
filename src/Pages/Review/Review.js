@@ -5,7 +5,7 @@ import ReviewRow from './ReviewRow';
 
 const Review = () => {
     const {user } = useContext(AuthContext)
-    const [reviews, setReviews] = useState({})
+    const [reviews, setReviews] = useState([])
     
     
     useEffect(() =>{
@@ -14,9 +14,26 @@ const Review = () => {
         .then(data => setReviews(data))
     }, [user?.email])
 
+    const hendelDelete = (id) => {
+      const proceed = window.confirm("are you sure review delete");
+      if (proceed) {
+        fetch(`http://localhost:6600/reviews/${id}`, {
+          method: "DELETE",
+        }).then((res) =>
+          res.json().then((data) => {
+            console.log(data);
+            if(data.deletedCount > 0)
+            alert('Deleted successfully ');
+            const remaining = reviews.filter(data => data._id !==id);
+            setReviews(remaining);
+          })
+        );
+      }
+    };
+
     return (
       <div>
-        <div>{reviews.length}</div>
+        {/* <div>{reviews.length}</div> */}
         <div className="overflow-x-auto w-full">
           <table className="table w-full">
             <thead>
@@ -27,14 +44,18 @@ const Review = () => {
                 <th>Review/Massages</th>
                 <th>
                   <label>
-                    <input type="checkbox" className="checkbox" />
+                    <button type="btn btn-xs">X</button>
                   </label>
                 </th>
               </tr>
             </thead>
             <tbody>
               {reviews.map((review) => (
-                <ReviewRow key={review._id} review={review}></ReviewRow>
+                <ReviewRow
+                  key={review._id}
+                  review={review}
+                  hendelDelete={hendelDelete}
+                ></ReviewRow>
               ))}
             </tbody>
           </table>

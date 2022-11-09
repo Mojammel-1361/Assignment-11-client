@@ -6,7 +6,7 @@ import logo from '../../img/doctor_logo.jpeg'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-
+  
     const menuItem = (
       <>
         <li>
@@ -15,15 +15,32 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link className="font-semibold" to="/seeall">
-            All Services
+          <Link className="font-semibold" to="/blog">
+            Blog
           </Link>
         </li>
-        <li>
-          <Link className="font-semibold" to="/review">
-            Review
-          </Link>
-        </li>
+        {user?.email ? (
+          <>
+            <li>
+              <Link className="font-semibold" to="/seeall">
+                All Services
+              </Link>
+              <li>
+                <Link className="font-semibold" to="/review">
+                  Review
+                </Link>
+              </li>
+            </li>
+          </>
+        ) : (
+          <li>
+            <li>
+              <p className="font-semibold text-red-500">
+                place login First and access All Service
+              </p>
+            </li>
+          </li>
+        )}
       </>
     );
 
@@ -72,6 +89,7 @@ const Header = () => {
             <a href="/">
               {user?.uid ? (
                 <>
+
                   <span>{user?.displayName}</span>
                   <button onClick={handelLogOut} className="btn btn-xs m-1">
                     Log Out

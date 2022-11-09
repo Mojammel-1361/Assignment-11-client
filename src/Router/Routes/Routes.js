@@ -6,6 +6,7 @@ import Login from "../../Pages/Login/Login";
 import SeeAll from "../../Pages/SeeAll/SeeAll";
 import SignUp from "../../Pages/SignUp/SignUp";
 import Review from '../../Pages/Review/Review';
+import Blog from '../../Pages/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/review",
         element: <Review></Review>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
     ],
   },
