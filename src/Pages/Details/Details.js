@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contex/AuthProvidor/AuthProvidor';
 
 const Details = () => {
-  const {_id, img, title, description,  } = useLoaderData();
+  const {_id, img, title, description, price  } = useLoaderData();
   const {user} =useContext(AuthContext);
 
   const hendelPlaceReview = event =>{
@@ -52,7 +52,8 @@ const Details = () => {
           <div className="card-body">
             <h2 className="card-title">{title}</h2>
             <h2>{description}</h2>
-            <div className="card-actions justify-end">
+            <div className="card-actions justify-between">
+              <div className="text-xl">Visiting price: {price} $</div>
               <Link to="/seeall" className="btn btn-primary btn-xs">
                 back
               </Link>

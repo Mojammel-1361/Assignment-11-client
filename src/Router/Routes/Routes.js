@@ -34,12 +34,10 @@ const router = createBrowserRouter([
         path: "/seeall",
         element: <SeeAll></SeeAll>,
       },
-      // {
-      //   path: "/review/:id",
-      //   element: <Review></Review>,
-      //   loader: ({ params }) =>
-      //     fetch(`http://localhost:6600/services/${params.id}`),
-      // },
+      {
+        path: "/review",
+        element: <Review></Review>,
+      },
     ],
   },
 ]);

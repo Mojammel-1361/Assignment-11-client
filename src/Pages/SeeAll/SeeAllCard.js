@@ -23,9 +23,11 @@ const SeeAllCard = ({ service }) => {
             <p>{description}</p>
           )}
         </div>
-        <div className="card-actions justify-end">
+        <div className="card-actions justify-between">
+          <div>Visiting price: {price} $</div>
           <>
-            Rating: {price} <FaStar /> <FaStarHalfAlt />
+            Rating: {price} <FaStar />
+            <FaStar /> <FaStarHalfAlt />
           </>
         </div>
       </div>
