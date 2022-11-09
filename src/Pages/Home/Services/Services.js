@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contex/AuthProvidor/AuthProvidor';
+import useTitle from '../../../Hook/useTitle';
 import ServicesCard from './ServicesCard';
 
 const Services = () => {
+  useTitle("Services");
     const [services, setServices] = useState([]);
     const { user} = useContext(AuthContext);
     useEffect(() =>{

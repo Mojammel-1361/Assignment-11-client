@@ -6,8 +6,10 @@ import {
   GoogleAuthProvider,
   
 } from "firebase/auth";
+import useTitle from '../../Hook/useTitle';
 
 const Login = () => {
+    useTitle('Login')
     const [error, setError] =useState('');
 
     const {googleLogin} = useContext(AuthContext)
@@ -35,8 +37,8 @@ const Login = () => {
           .then((result) => {
             const user = result.user;
             console.log(user);
-            from.reset();
             setError('');
+            from.reset();
             navigate("/");
           })
           .catch((error) => {

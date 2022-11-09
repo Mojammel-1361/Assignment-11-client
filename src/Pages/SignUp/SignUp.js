@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import icon from "../../img/doctor_logo.jpeg";
 import { AuthContext } from "../../contex/AuthProvidor/AuthProvidor";
+import useTitle from "../../Hook/useTitle";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [error, setError] = useState("");
   const { createUser, updateUserProfile } = useContext(AuthContext);
-
+  useTitle("SingUp");
   const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -20,6 +22,7 @@ const SignUp = () => {
         console.log(user);
         setError("");
         form.reset();
+        navigate("/");
         handelUpdateUserProfile(name);
       })
       .catch((error) => {

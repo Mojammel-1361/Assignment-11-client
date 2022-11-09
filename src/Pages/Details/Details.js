@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contex/AuthProvidor/AuthProvidor';
+import useTitle from '../../Hook/useTitle';
 
 const Details = () => {
+  useTitle("Details");
   const { _id, img, title, description, price } = useLoaderData();
   
   const { user } = useContext(AuthContext);
@@ -58,9 +60,34 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <div>
-        <p>Mojammel</p>
+
+      {/* start */}
+
+      <div className="card card-compact mx-auto w-4/6 m-10 bg-base-100 shadow-xl">
+        <h1>Review</h1>
+        <div className="overflow-x-auto w-full">
+          <table className="table w-full">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Review/Massages</th>
+                <th>
+                  <label>
+                    <button type="btn btn-xs">X</button>
+                  </label>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
       </div>
+
+      {/* end */}
 
       <div>
         <form onSubmit={hendelPlaceReview}>
