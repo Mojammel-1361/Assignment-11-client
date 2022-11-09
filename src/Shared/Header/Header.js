@@ -19,11 +19,11 @@ const Header = () => {
             All Services
           </Link>
         </li>
-        {/* <li>
+        <li>
           <Link className="font-semibold" to="/review">
             Review
           </Link>
-        </li> */}
+        </li>
       </>
     );
 

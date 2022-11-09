@@ -82,19 +82,22 @@ const Details = () => {
                 placeholder="Name"
                 defaultValue={user?.displayName}
                 className="input input-bordered w-full "
+                required
               />
               <input
+                required
                 name="email"
                 type="text"
                 placeholder="Email"
                 defaultValue={user?.email}
                 className="input input-bordered w-full "
-                readOnly
+                
               />
               <textarea
                 name="massages"
                 className="textarea textarea-accent "
                 placeholder="Your Review"
+                required
               ></textarea>
             </div>
 
