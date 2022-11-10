@@ -1,4 +1,4 @@
-# A Doctor Review Web side
+## A Doctor Review Web side
 
 ### using vercel use server side deploy.
 ### firebase side login sing up and user firebase client deploy
@@ -8,14 +8,12 @@
 ### express using for setup server and manges backend Data.
 ### mongodb using for data stor and client Review store.
 
-git link client [https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Mojammel-1361]
-
 
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+git link client [https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Mojammel-1361]
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+git link server [https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-Mojammel-1361]
