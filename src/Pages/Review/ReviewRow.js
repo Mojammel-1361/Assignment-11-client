@@ -1,18 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contex/AuthProvidor/AuthProvidor';
 
 const ReviewRow = ({ review, hendelDelete }) => {
   const { _id, name, email, massages, dept,images } = review;
-
+const { user } = useContext(AuthContext);
   return (
     <tr>
       <td>
         <div className="flex items-center space-x-3">
           <div className="avatar">
             <div className="mask mask-squircle w-12 h-12">
-              <img
-                src={images}
-                alt="img"
-              />
+              <img src={images} alt="img" />
             </div>
           </div>
 
@@ -26,6 +25,11 @@ const ReviewRow = ({ review, hendelDelete }) => {
       <td>{dept}</td>
       <th>{massages}</th>
       <th>
+        <label>
+          <Link to={`/update/${review._id}`} className="btn btn-xs m-3">
+            Update
+          </Link>
+        </label>
         <label>
           <button onClick={() => hendelDelete(_id)} className="btn btn-xs">
             X

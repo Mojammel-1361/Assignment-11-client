@@ -7,6 +7,7 @@ import SeeAll from "../../Pages/SeeAll/SeeAll";
 import SignUp from "../../Pages/SignUp/SignUp";
 import Review from "../../Pages/Review/Review";
 import Blog from "../../Pages/Blog/Blog";
+import Update from '../../Update/Update';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        
       },
     ],
   },
