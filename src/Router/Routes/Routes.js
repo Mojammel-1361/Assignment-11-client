@@ -5,8 +5,8 @@ import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import SeeAll from "../../Pages/SeeAll/SeeAll";
 import SignUp from "../../Pages/SignUp/SignUp";
-import Review from '../../Pages/Review/Review';
-import Blog from '../../Pages/Blog/Blog';
+import Review from "../../Pages/Review/Review";
+import Blog from "../../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <Details></Details>,
         loader: ({ params }) =>
-          fetch(`http://localhost:6600/services/${params.id}`),
+          fetch(`https://doctor-server-two.vercel.app/services/${params.id}`),
       },
       {
         path: "/seeall",

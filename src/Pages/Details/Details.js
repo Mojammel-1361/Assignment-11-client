@@ -1,14 +1,17 @@
-import React, { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../contex/AuthProvidor/AuthProvidor';
-import useTitle from '../../Hook/useTitle';
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../contex/AuthProvidor/AuthProvidor";
+import useTitle from "../../Hook/useTitle";
+import AllComentRow from "./AllComentRow";
+import "react-photo-view/dist/react-photo-view.css";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const Details = () => {
   useTitle("Details");
-  const { _id, img, title, description, price } = useLoaderData();
-  
   const { user } = useContext(AuthContext);
+  const [services, setServices] = useState([]);
 
+  const { _id, img, title, description, price } = useLoaderData();
   const hendelPlaceReview = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -25,7 +28,7 @@ const Details = () => {
       massages,
     };
 
-    fetch("http://localhost:6600/reviews", {
+    fetch("https://doctor-server-two.vercel.app/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -43,11 +46,23 @@ const Details = () => {
       .catch((error) => console.error(error));
   };
 
+  useEffect(() => {
+    fetch("https://doctor-server-two.vercel.app/allRevievs")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
+
   return (
     <div>
       <div className="card card-compact mx-auto w-4/6 m-10 bg-base-100 shadow-xl">
         <figure>
-          <img src={img} alt="Shoes" />
+          <PhotoProvider>
+            {
+              <PhotoView src={img}>
+                <img src={img} alt="Shoes" />
+              </PhotoView>
+            }
+          </PhotoProvider>
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
@@ -64,24 +79,24 @@ const Details = () => {
       {/* start */}
 
       <div className="card card-compact mx-auto w-4/6 m-10 bg-base-100 shadow-xl">
-        <h1>Review</h1>
         <div className="overflow-x-auto w-full">
+          <samp className="mx-auto text-2xl">Review</samp>
           <table className="table w-full">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Department</th>
+                <th>Name & Email</th>
+                {/* <th>Email</th> */}
+
                 <th>Review/Massages</th>
-                <th>
-                  <label>
-                    <button type="btn btn-xs">X</button>
-                  </label>
-                </th>
               </tr>
             </thead>
             <tbody>
-              
+              {services.map((service) => (
+                <AllComentRow
+                  key={service._id}
+                  service={service}
+                ></AllComentRow>
+              ))}
             </tbody>
           </table>
         </div>

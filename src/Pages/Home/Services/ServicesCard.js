@@ -3,15 +3,27 @@ import { Link } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../contex/AuthProvidor/AuthProvidor';
+import "react-photo-view/dist/react-photo-view.css";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const ServicesCard = ({service}) => {
     const { _id, img, title, description, price } = service;
     const { user } = useContext(AuthContext);
     return (
       <div className="card w-96 bg-base-100 shadow-xl">
+        {/* <img className="w-53" src={img} alt="Shoes" /> */}
         <figure>
-          <img className="w-53" src={img} alt="Shoes" />
+          <PhotoProvider>
+            
+              {
+                <PhotoView  src={img}>
+                  <img className="w-53" src={img} alt="Shoes" />
+                </PhotoView>
+              }
+            
+          </PhotoProvider>
         </figure>
+
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
           <div className="text-justify">
