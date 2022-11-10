@@ -5,9 +5,9 @@ const Address = () => {
     return (
       <div>
         <div className="hero  bg-base-200 ">
-          <div className="hero-content flex-col lg:flex-row">
+          <div className="hero-content flex-col lg:flex-row ">
             <iframe
-              width="476"
+              width="406"
               height="412"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=dhaka&t=&z=11&ie=UTF8&iwloc=&output=embed"
@@ -23,7 +23,7 @@ const Address = () => {
                 <br />
                 Mobile: 01733543615
               </p>
-              
+
               <p className="text-2xl font-bold">Open Hours:</p>
               <p className="py-6 text-xl gap-1">
                 Wednesday 9AM 11PM <br />

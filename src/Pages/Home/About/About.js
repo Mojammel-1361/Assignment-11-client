@@ -6,11 +6,11 @@ const About = () => {
     return (
       <div>
         <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero-content flex-col lg:flex-row-reverse ">
             <img
               alt="/"
               src={about}
-              className="max-w-lg rounded-lg shadow-2xl"
+              className="max-w-md rounded-lg shadow-2xl w-96"
             />
             <div>
               <h1 className="text-5xl font-bold">
@@ -36,7 +36,9 @@ const About = () => {
                 cover, languages spoken, and whether they are accepting new
                 patients.
               </p>
-              <Link to='/login' className="btn btn-primary">Get Started</Link>
+              <Link to="/login" className="btn btn-primary">
+                Get Started
+              </Link>
             </div>
           </div>
         </div>
