@@ -9,37 +9,41 @@ import {
 import useTitle from '../../Hook/useTitle';
 
 const Login = () => {
+  // const location = useLocation();
+  const navigate = useNavigate();
     useTitle('Login')
     const [error, setError] =useState('');
 
     const {googleLogin} = useContext(AuthContext)
     const provider = new GoogleAuthProvider();
-     const navigate = useNavigate();
+     
+     
     const handleGoogle = () =>{
         googleLogin(provider)
           .then((result) => {
             const user = result.user;
             console.log(user);
-            navigate('/')
+            navigate('/');
           })
           .catch((err) => console.error(err));
         
     }
     const {signIn} =useContext(AuthContext);
 
-
+    
     const handleLogin = event =>{
         event.preventDefault();
         const from = event.target;
         const email = from.email.value;
         const password = from.password.value;
+
         signIn(email, password)
           .then((result) => {
             const user = result.user;
             console.log(user);
             setError('');
             from.reset();
-            navigate("/");
+            navigate('/');
           })
           .catch((error) => {
             console.error(error);

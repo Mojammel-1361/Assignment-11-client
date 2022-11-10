@@ -11,7 +11,7 @@ const ReviewRow = ({ review, hendelDelete }) => {
             <div className="mask mask-squircle w-12 h-12">
               <img
                 src={images}
-                alt="Avatar Tailwind CSS Component"
+                alt="img"
               />
             </div>
           </div>
