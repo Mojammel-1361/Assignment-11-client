@@ -19,6 +19,7 @@ const Details = () => {
     const name = form.name.value;
     const email = form.email.value;
     const massages = form.massages.value;
+    const images = form.images.value;
 
     const review = {
       service: _id,
@@ -26,6 +27,7 @@ const Details = () => {
       name,
       email,
       massages,
+      images,
     };
 
     fetch("https://doctor-server-two.vercel.app/reviews", {
@@ -133,6 +135,13 @@ const Details = () => {
               type="text"
               placeholder="Email"
               defaultValue={user?.email}
+              className="input input-bordered w-full "
+            />
+            <input
+              required
+              name="images"
+              type="text"
+              placeholder="image url"
               className="input input-bordered w-full "
             />
             <textarea
