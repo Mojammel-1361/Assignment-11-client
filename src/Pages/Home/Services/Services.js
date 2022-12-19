@@ -2,17 +2,26 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contex/AuthProvidor/AuthProvidor";
 import useTitle from "../../../Hook/useTitle";
+import Spenner from "../../../Spenner/Spenner";
 import ServicesCard from "./ServicesCard";
 
 const Services = () => {
   useTitle("Services");
+  const [loding, setLoding] = useState(false);
   const [services, setServices] = useState([]);
   const { user } = useContext(AuthContext);
   useEffect(() => {
+    setLoding(true);
     fetch("https://doctor-server-two.vercel.app/services")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => {
+        setLoding(false);
+        setServices(data);
+      });
   }, []);
+  if (loding) {
+    return <Spenner></Spenner>;
+  }
   return (
     <div>
       <div className="text-center m-8">

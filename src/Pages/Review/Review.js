@@ -3,16 +3,21 @@ import { AuthContext } from "../../contex/AuthProvidor/AuthProvidor";
 import { useState, useEffect } from "react";
 import ReviewRow from "./ReviewRow";
 import useTitle from "../../Hook/useTitle";
+import Spenner from "../../Spenner/Spenner";
 
 const Review = () => {
+  const [loding, setLoding] = useState(false);
   useTitle("Review");
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
+    setLoding(true);
     fetch(`https://doctor-server-two.vercel.app/reviews?email=${user?.email}`)
       .then((res) => res.json())
-      .then((data) => setReviews(data));
+      .then((data) => {
+        setLoding(false);
+        setReviews(data)});
   }, [user?.email]);
 
   const hendelDelete = (id) => {
@@ -30,7 +35,9 @@ const Review = () => {
       );
     }
   };
-
+if (loding) {
+  return <Spenner></Spenner>;
+}
   return (
     <div>
       <div className="overflow-x-auto w-full">

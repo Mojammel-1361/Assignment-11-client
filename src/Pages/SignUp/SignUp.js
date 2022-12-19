@@ -3,8 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import icon from "../../img/doctor_logo.jpeg";
 import { AuthContext } from "../../contex/AuthProvidor/AuthProvidor";
 import useTitle from "../../Hook/useTitle";
+import Spenner from "../../Spenner/Spenner";
+import { toast } from "react-hot-toast";
 
 const SignUp = () => {
+  const [loding, setLoding] = useState(false);
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -15,14 +18,16 @@ const SignUp = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-
+    setLoding(true);
     createUser(email, password)
       .then((result) => {
+        setLoding(false)
         const user = result.user;
         console.log(user);
         setError("");
         form.reset();
         navigate("/");
+        toast.success("SingUp successfully");
         handelUpdateUserProfile(name);
       })
       .catch((error) => {
@@ -39,17 +44,19 @@ const SignUp = () => {
       .then(() => {})
       .catch((error) => console.error(error));
   };
-
+  if (loding){
+    return <Spenner></Spenner>;
+  }
   return (
     <div>
-      <div className="hero w-100% ">
-        <div className="hero-content grid md:grid-cols-2 mx-auto  flex-col lg:flex-row">
+      <div className="hero w-full">
+        <div className="hero-content ">
           <div className="text-center lg:text-left">
             <img className="w-52" src={icon} alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm py-10 shadow-2xl bg-base-100">
             <form onSubmit={handleSignUp} className="card-body">
-              <p className="text-xl">Registration</p>
+              <p className="text-xl">New Member Registration</p>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>

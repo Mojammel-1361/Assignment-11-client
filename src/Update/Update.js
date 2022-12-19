@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Update = () => {
-    return (
-        <div>
-            <p>Place update update</p>
-        </div>
-    );
+  return (
+    <div>
+      <p> update update coming soon</p>
+    </div>
+  );
 };
 
 export default Update;

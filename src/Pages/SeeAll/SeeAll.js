@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from "react";
 import useTitle from "../../Hook/useTitle";
+import Spenner from "../../Spenner/Spenner";
 import SeeAllCard from "./SeeAllCard";
 
 const SeeAll = () => {
+  const [loding, setLoding] = useState(false);
   useTitle("allService");
   const [services, setServices] = useState([]);
   useEffect(() => {
+    setLoding(true);
     fetch("https://doctor-server-two.vercel.app/servicesAll")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => {
+        setLoding(false);
+        setServices(data);
+      });
+      
   }, []);
+  if (loding) {
+    return <Spenner></Spenner>;
+  }
   return (
     <div>
       <div className="text-center m-8">

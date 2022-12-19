@@ -16,29 +16,30 @@ const Header = () => {
         </li>
         <li>
           <Link className="font-semibold" to="/blog">
-            Blog
+            Blogs
           </Link>
         </li>
         {user?.email ? (
           <>
             <li>
-              <Link className="font-semibold" to="/seeall">
+              <Link className="font-semibold mx-1" to="/seeall">
                 All Services
               </Link>
+              </li>
               <li>
                 <Link className="font-semibold" to="/review">
                   Review
                 </Link>
               </li>
-            </li>
+            
           </>
         ) : (
           <li>
-            <li>
+            
               <p className="font-semibold text-red-500">
                 place login First and access All Service
               </p>
-            </li>
+            
           </li>
         )}
       </>
@@ -77,9 +78,9 @@ const Header = () => {
                 {menuItem}
               </ul>
             </div>
-            <Link to='/' className="btn btn-ghost normal-case text-xl">
-              <img className="w-9" src={logo} alt="" />
-              <h1>P_Doctor </h1>
+            <Link to="/" className="btn btn-ghost normal-case text-xl">
+              <img className="w-4" src={logo} alt="" />
+              <h1>Popular_Doctor </h1>
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -89,14 +90,13 @@ const Header = () => {
             <a href="/">
               {user?.uid ? (
                 <>
-
                   <span>{user?.displayName}</span>
-                  <button onClick={handelLogOut} className="btn btn-xs m-1">
+                  <button onClick={handelLogOut} className="btn btn-sm m-1">
                     Log Out
                   </button>
                 </>
               ) : (
-                <button className="btn btn-outline btn-primary">
+                <button className="btn btn-sm btn-outline btn-primary">
                   <Link className="font-semibold " to="/login">
                     Login
                   </Link>

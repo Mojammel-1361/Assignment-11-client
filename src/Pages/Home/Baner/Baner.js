@@ -8,10 +8,10 @@ const Baner = () => {
       <div>
         <div className="carousel w-full">
           <div id="item1" className="carousel-item w-full">
-            <img alt="" src={baner1} className="w-full h-96" />
+            <img alt="" src={baner2} className="w-full h-96" />
           </div>
           <div id="item2" className="carousel-item w-full">
-            <img alt="" src={baner2} className="w-full h-96" />
+            <img alt="" src={baner1} className="w-full h-96" />
           </div>
           <div id="item3" className="carousel-item w-full">
             <img alt="" src={baner3} className="w-full h-96" />
