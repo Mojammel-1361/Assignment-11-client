@@ -3,7 +3,7 @@ import { useState, CSSProperties } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 
 const Spenner = () => {
-    let [color, setColor] = useState("#000");
+    let [color, setColor] = useState("#46C2CB");
 
     return (
       <div className="sweet-loading flex items-center justify-center ">

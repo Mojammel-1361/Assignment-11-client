@@ -5,12 +5,13 @@ import useTitle from "../../Hook/useTitle";
 import AllComentRow from "./AllComentRow";
 import "react-photo-view/dist/react-photo-view.css";
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import Spenner from "../../Spenner/Spenner";
 
 const Details = () => {
   useTitle("Details");
   const { user } = useContext(AuthContext);
   const [services, setServices] = useState([]);
-
+  const [loding, setLoding] = useState(false);
   const { _id, img, title, description, price } = useLoaderData();
   const hendelPlaceReview = (event) => {
     event.preventDefault();
@@ -49,11 +50,18 @@ const Details = () => {
   };
 
   useEffect(() => {
+    setLoding(true)
     fetch("https://doctor-server-two.vercel.app/allRevievs")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => {
+        setLoding(false)
+        setServices(data)
+      });
   }, []);
 
+  if (loding) {
+    return <Spenner></Spenner>;
+  }
   return (
     <div>
       <div className="card card-compact mx-auto w-4/6 m-10 bg-base-100 shadow-xl">
@@ -153,11 +161,19 @@ const Details = () => {
 
             {user?.email ? (
               <>
-                <input className="btn" type="submit" name="" value="Review" />
+                <input
+                  className="btn text-cyan-500 font-extrabold "
+                  type="submit"
+                  name=""
+                  value="Review"
+                />
               </>
             ) : (
               <>
-                <Link className="btn text-red-600   " to="/login">
+                <Link
+                  className="btn text-red-500 font-extrabold"
+                  to="/login"
+                >
                   Place Login and Post Review
                 </Link>{" "}
               </>
